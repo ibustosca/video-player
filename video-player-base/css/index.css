@@ -1,0 +1,140 @@
+:root {
+  --Primary: #43DDE6;
+  --White: #ffffff;  
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #4a148c;
+  box-shadow: 0px 5px 10px black;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #4a148c;
+  box-shadow: 0px 5px 10px black;
+  min-height: 70px;
+}
+
+h1 {
+  color: white;
+  font-size: 2.1rem;
+  margin: 13px 25px;
+}
+
+p {
+  color: white;
+  font-size: 20px;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  color: var(--White);
+  background-color: var(--Primary);
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  inline-size: 32px;
+  block-size: 32px;
+}
+
+.wrapper {
+  max-inline-size: 900px;
+  margin: auto;
+}
+
+.player {
+  position: relative;
+  margin-top: 50px;
+  margin-bottom: 45px;
+}
+
+.player video {
+  inline-size: 100%;
+  aspect-ratio: 16/9;
+}
+
+.player-title {
+  position: absolute;
+  inset-block-start: 10px;
+  inset-inline-start: 20px;
+}
+
+.player-actions {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  z-index: 2;
+}
+
+.player-progress {
+  position: absolute;
+  inset-block-end: 0;
+  inset-inline: 0;
+  display: flex;
+  padding: 10px;
+  z-index: 2;
+}
+
+.player-progress input {
+  flex: 1;
+}
+
+.player-overlay {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: .3s opacity;
+}
+
+.player:hover .player-overlay {
+  opacity: 1;
+}
+
+#play {
+  background-image: url('../assets/images/play.svg');
+}
+
+#pause {
+  background-image: url('../assets/images/pause.svg');
+}
+
+#forward {
+  background-image: url('../assets/images/+10.svg');
+}
+
+#backward {
+  background-image: url('../assets/images/-10.svg');
+}
+
+@media (max-width: 525px) {
+  h2 {
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1024px) {
+  header, footer {
+    width: 1024px;
+    margin: 0 auto;
+  }
+}
