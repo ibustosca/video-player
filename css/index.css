@@ -126,6 +126,9 @@ button {
 }
 
 @media (max-width: 525px) {
+  h2 {
+    font-size: 16px;
+  }
   p {
     font-size: 16px;
   }
